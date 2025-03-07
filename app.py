@@ -24,7 +24,10 @@ def init_db():
     conn.commit()
     conn.close()
 
-import re
+@app.before_request
+def before_request():
+    """Ensure the database is initialized before every request."""
+    init_db()
 
 def is_strong_sqli_attempt(data):
     """Detects advanced SQL injection patterns to block."""
