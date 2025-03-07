@@ -86,10 +86,10 @@ def login():
         
         if stored_password.startswith(password):
             if password == stored_password:
-                time.sleep(2)
+                time.sleep(5)
                 return send_hidden_image()  # Return image only if full password is correct
             else:
-                time.sleep(2)  # Introduce a delay to indicate partial correctness
+                time.sleep(5)  # Introduce a delay to indicate partial correctness
                 return jsonify({"error": "Incorrect credentials"}), 401
 
     return jsonify({"error": "Invalid credentials"}), 401
