@@ -1,6 +1,2 @@
 flask
-sqlite3
-os
-re
-time
 gunicorn
