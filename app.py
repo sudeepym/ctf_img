@@ -6,7 +6,7 @@ import time
 
 app = Flask(__name__)
 
-FLAG_IMAGE_PATH = "/tmp/stegano.png"  # Secure location
+FLAG_IMAGE_PATH = "/etc/secrets/img.txt"  # Secure location
 VALID_PASSWORD = os.getenv("VALID_PASSWORD", "defaultpassword")  # Use env variable
 DB_FILE = "database.db"
 
